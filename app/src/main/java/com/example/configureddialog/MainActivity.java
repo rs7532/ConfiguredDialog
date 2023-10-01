@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     Switch series_type;
 
-
     ListView lv;
     TextView x, d, n, Sn;
 
@@ -42,41 +41,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         lv = findViewById(R.id.List_View);
-        System.out.println(1);
         x = findViewById(R.id.X);
-        System.out.println(2);
         d = findViewById(R.id.d);
-        System.out.println(3);
         n = findViewById(R.id.n);
-        System.out.println(4);
         Sn = findViewById(R.id.Sn);
-        System.out.println(5);
         btn = findViewById(R.id.button);
-        System.out.println(6);
 
         arr_series = new String[20];
+        Reset_series();
 
 
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        System.out.println(7);
         lv.setOnItemClickListener(this);
-
-        Reset_series();
 
         adp = new ArrayAdapter<>(this,
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, arr_series);
-        System.out.println(8);
         lv.setAdapter(adp);
-        System.out.println(9);
 
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                System.out.println(11);
                 ad = createDialog();
-                System.out.println(12);
                 ad.show();
-                System.out.println(13);
             }
         });
     }
@@ -121,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adb.setView(my_dialog);
         my_dialog.setBackgroundColor(Color.WHITE);
         adb.setTitle("Series data input");
+
         adb.setPositiveButton("Enter", new DialogInterface.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -135,12 +122,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 d.setText("d = "+ difference_Multiplier.getText());
             }
         });
+
         adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
         });
+
         adb.setNeutralButton("Reset", new DialogInterface.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
