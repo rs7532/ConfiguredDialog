@@ -1,5 +1,6 @@
 package com.example.configureddialog;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -160,8 +163,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Sn.setText("Sn = "+sum(position));
     }
 
-    public void credits_pressed(View view) {
-        Intent si = new Intent(this, Credits.class);
-        startActivity(si);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        String st = item.getTitle().toString();
+        if(st.equals("credits/main menu")){
+            Intent si = new Intent(this, Credits.class);
+            startActivity(si);
+        }
+        else{
+            closeOptionsMenu();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

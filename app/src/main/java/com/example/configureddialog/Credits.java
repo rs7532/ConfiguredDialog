@@ -32,7 +32,7 @@ public class Credits extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         String st = item.getTitle().toString();
-        if(st.equals("main menu")){
+        if(st.equals("credits/main menu")){
             finish();
         }
         else{
