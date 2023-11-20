@@ -48,7 +48,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="500dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -60,7 +60,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/X"
@@ -81,7 +81,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="500dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -93,7 +93,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="150dp" />
 
             <TextView
                 android:id="@+id/d"
@@ -114,7 +114,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="500dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -126,7 +126,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_height="250dp" />
 
             <TextView
                 android:id="@+id/n"
@@ -147,7 +147,7 @@
         tools:layout_editor_absoluteX="556dp">
 
         <Space
-            android:layout_width="500dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -159,7 +159,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="400dp" />
+                android:layout_height="350dp" />
 
             <TextView
                 android:id="@+id/Sn"
@@ -179,7 +179,7 @@
         android:orientation="horizontal">
 
         <Space
-            android:layout_width="500dp"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
@@ -191,11 +191,11 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="550dp" />
+                android:layout_height="400dp" />
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="pressed"
                 android:text="DATA BUTTON" />
